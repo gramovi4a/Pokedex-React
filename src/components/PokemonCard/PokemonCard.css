@@ -1,0 +1,11 @@
+.pokemon-card-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.pokemon-image {
+    height: 500px;
+}

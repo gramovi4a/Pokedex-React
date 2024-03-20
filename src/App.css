@@ -41,34 +41,3 @@ body {
   background-color: #f4a261;
 }
 
-.pokedex {
-  margin-top: px;
-}
-
-.pokemon-container {
-  background-color: #f9cca9; /* Set background color */
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
-  color: white; /* Set text color */
-  margin-right: 10px;
-  width: calc(20% - 10px);
-  text-align: center;
-}
-
-.pokemons-list {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-}
-
-.pokedex-header {
-  text-align: center;
-  color: white;
-}

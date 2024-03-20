@@ -1,0 +1,37 @@
+
+  .card {
+  background-color: #f9cca9;
+  color: white; 
+  margin-right: 10px;
+  width: calc(20% - 15px);
+  text-align: center;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.5s;
+
+  user-select: none;
+}
+
+.card-front { 
+  height: 100%;    /* so i can click anywhere inside the card */
+ 
+}
+
+.card-back {
+  height: 100%;  /* so i can click anywhere inside the card */
+}
+
+
+.react-card-flip {  /* so i can click anywhere inside the card */
+  height: 100%;
+  width: 100%;
+}
