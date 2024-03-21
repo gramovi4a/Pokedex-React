@@ -7,7 +7,7 @@ const Pokedex = () => {
   const [pokemonList, setPokemonList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pokemonsPerPage] = useState(10);
+  const [pokemonsPerPage] = useState(8);
 
   useEffect(() => {
     const fetchPokemons = async () => {
@@ -44,8 +44,9 @@ const Pokedex = () => {
   }
 
   return (
+    <section className="home" id="home">
     <div className="pokedex">
-      <h1 className="pokedex-header">Welcome to Pokedex!</h1>
+      <h1 className="pokedex-header">Welcome to Pokédex!</h1>
       <div className="pokemon-container">
         {currentPokemons.map((pokemon, index) => (
           <Link
@@ -77,6 +78,9 @@ const Pokedex = () => {
         />
       </div>
     </div>
+
+    </section>
+
   );
 };
 
