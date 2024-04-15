@@ -56,7 +56,7 @@ const Pokedex = () => {
             style={{ textDecoration: "none" }}
           >
 
-              <h3 className="pokemon-name">{pokemon.name}</h3>
+              <p className="pokemon-name">{pokemon.name}</p>
               <img
                 className="pokemon-img"
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${

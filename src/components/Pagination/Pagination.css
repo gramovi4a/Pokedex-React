@@ -8,15 +8,17 @@
     user-select: none;
 }
 
-.arrow-button {
-    margin: 0 5px;
+
+ 
+.pagination-button {
+    color: red;
 }
 
 .page-link {
     border: none;
     color: white;
-    background-color: #F4A261;
-    margin-right: 5px;
+    background-color:  rgb(219, 8, 8);
+    margin: 5px 5px;
     font-size: 17px;
     line-height: 1;
     height: 40px;
@@ -25,10 +27,6 @@
 }
 
 .active {
-    background-color: #f9cca9; 
+    background-color:  rgb(255, 69, 69);
     color: white; 
-}
-
-.pagination-button {
-    color: white;
 }

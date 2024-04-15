@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Pokedex from "./components/Pokedex/Pokedex";
 import NavBar from "./components/NavBar/NavBar";
 import About from "./components/About/About";
@@ -17,9 +13,9 @@ function App() {
         <NavBar />
         <div className="routes">
           <Routes>
-            <Route path="/" exact Component={Pokedex} />
-            <Route path="/pokemon/:name" Component={PokemonCard} />
-            <Route path="/about" Component={About} />
+             <Route path="/" element={<Pokedex />} />
+            <Route path="/pokemon/:name" element={<PokemonCard />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
       </Router>
