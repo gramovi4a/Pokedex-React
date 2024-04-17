@@ -45,42 +45,42 @@ const Pokedex = () => {
 
   return (
     <section className="home" id="home">
-    <div className="pokedex">
-      <h1 className="pokedex-header">Welcome to Pokédex!</h1>
-      <div className="pokemon-container">
-        {currentPokemons.map((pokemon, index) => (
-          <Link
-            className="pokemon-card"
-            key={index}
-            to={`/pokemon/${pokemon.name}`}
-            style={{ textDecoration: "none" }}
-          >
+      <div className="pokedex">
+        {/* <h1 className="pokedex-header">Welcome to Pokédex!</h1> */}
+        <div className="pokemon-container">
+          {currentPokemons.map((pokemon, index) => (
+            <Link
+              className="pokemon-card"
+              key={index}
+              to={`/pokemon/${pokemon.name}`}
+              style={{ textDecoration: "none" }}
+            >
+              <div className="pokemon-img-container">
+                <img
+                  className="pokemon-img"
+                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+                    pokemon.url.split("/")[6]
+                  }.png`}
+                  title={pokemon.name}
+                  alt=""
+                />
+              </div>
 
               <p className="pokemon-name">{pokemon.name}</p>
-              <img
-                className="pokemon-img"
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
-                  pokemon.url.split("/")[6]
-                }.png`}
-                title={pokemon.name}
-                alt=""
-              />
-          </Link>
-        ))}
-      </div>
+            </Link>
+          ))}
+        </div>
 
-      <div className="pagination">
-        <Pagination
-          pokemonsPerPage={pokemonsPerPage}
-          totalPokemons={pokemonList.length}
-          paginate={paginate}
-          currentPage={currentPage}
-        />
+        <div className="pagination">
+          <Pagination
+            pokemonsPerPage={pokemonsPerPage}
+            totalPokemons={pokemonList.length}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
+        </div>
       </div>
-    </div>
-
     </section>
-
   );
 };
 

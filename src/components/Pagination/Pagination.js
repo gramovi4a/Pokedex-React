@@ -1,55 +1,29 @@
-// Pagination file
+import { Pagination } from '@mui/material';
 import "./Pagination.css";
-import { SlArrowRight } from "react-icons/sl";
-import { SlArrowLeft } from "react-icons/sl";
-
 import React from "react";
 
-const Pagination = ({
+const CustomPagination = ({
   pokemonsPerPage,
   totalPokemons,
   paginate,
   currentPage,
 }) => {
-  const pageNumbers = [];
-
-  for (let i = 1; i <= Math.ceil(totalPokemons / pokemonsPerPage); i++) {
-    pageNumbers.push(i); // give as the page numbers
-  }
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(totalPokemons / pokemonsPerPage);
 
   return (
     <div className="pagination-container">
-
-      {/* Previous button */}
-      <div className="arrow-button">
-        <SlArrowLeft
-          onClick={currentPage !== 1 ? () => paginate(currentPage - 1) : undefined}
-          className="pagination-button"
-        />
-      </div>
       
-      <div className="page-numbers">
-        {pageNumbers.map((number) => (
-          <button
-            onClick={() => paginate(number)}
-            href="!#"
-            className={number === currentPage ? "page-link active" : "page-link"}
-            key={number}
-          >
-            {number}
-          </button>
-        ))}
-      </div>
+      {/* Material-UI Pagination component */}
+      <Pagination
+        count={totalPages}
+        page={currentPage}
+        onChange={(event, page) => paginate(page)}
+       
+      />
 
-      {/* Next button */}
-      <div className="arrow-button">
-        <SlArrowRight
-        onClick={currentPage !== Math.ceil(totalPokemons / pokemonsPerPage) ? () => paginate(currentPage + 1) : undefined}
-          className="pagination-button"
-        />
-      </div>
     </div>
   );
 };
 
-export default Pagination;
+export default CustomPagination;
