@@ -42,7 +42,6 @@ nav.navbar {
   align-items: center;
 }
 
-
 .me-auto {
   color: white;
   margin-right: 50px;
@@ -56,3 +55,28 @@ nav.navbar {
   font-size: 20px;
 }
 
+
+
+@media screen and (max-width: 992px) {
+  .me-auto {
+    margin-right: 0px;
+  }
+  .navbar-brand {
+    margin-left:30px;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .me-auto {
+    margin-right: 0px;
+  }
+  .navbar-brand {
+    margin-left:30px;
+}
+}
+
+@media screen and (max-width: 576px) {
+  .me-auto {
+    margin-right: 0px;
+  }
+}

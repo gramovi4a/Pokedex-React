@@ -67,6 +67,7 @@ const Pokedex = () => {
               </div>
 
               <p className="pokemon-name">{pokemon.name}</p>
+              
             </Link>
           ))}
         </div>

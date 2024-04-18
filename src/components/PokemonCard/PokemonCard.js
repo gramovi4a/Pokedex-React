@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./PokemonCard.css";
 
 const TypeColor = {
@@ -99,7 +100,8 @@ const PokemonCard = () => {
 
   return (
     <div className="card-container">
-      <div className="pokemon-card-container">{generateCard()}</div>
+      <div className="pk-card">{generateCard()}</div>
+      <Link to="/" className="back-button">Back to Home</Link>
     </div>
   );
 };
